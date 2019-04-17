@@ -24,7 +24,7 @@ function viewCart() {
       view += `${cart[i].itemName} at $${cart[i].itemPrice}, `
     }
   }
-  return view;
+  return view.slice(0, -1);
 }
 
 function total() {
