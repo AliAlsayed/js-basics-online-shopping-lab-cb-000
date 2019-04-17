@@ -27,7 +27,7 @@ function viewCart() {
 
   for(var i = 0; i < cart.length; i++){
     if (i == cart.length - 1){
-      view += ` and ${cart[i].itemName} at $${cart[i].itemPrice}, `
+      view += `and ${cart[i].itemName} at $${cart[i].itemPrice}, `
     } else {
       view += `${cart[i].itemName} at $${cart[i].itemPrice}, `
     }
