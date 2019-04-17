@@ -26,7 +26,7 @@ function viewCart() {
       } else {
         view += `${cart[i].itemName} at $${cart[i].itemPrice}, `
       }
-      
+
     }
   }
   return view.slice(0, -2) + '.';
