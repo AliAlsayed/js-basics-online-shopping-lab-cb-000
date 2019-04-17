@@ -19,14 +19,17 @@ function viewCart() {
   var view = 'In your cart, you have '
   if (cart.length == 0){
     return 'Your shopping cart is empty.'
-  } else {
-    for(var i = 0; i < cart.length; i++){
-      if (i == cart.length - 1){
-        view += ` and ${cart[i].itemName} at $${cart[i].itemPrice}, `
-      } else {
-        view += `${cart[i].itemName} at $${cart[i].itemPrice}, `
-      }
+  } 
 
+  if (cart.length == 1){
+    return view + `${cart[i].itemName} at $${cart[i].itemPrice}.`
+  }
+  
+  for(var i = 0; i < cart.length; i++){
+    if (i == cart.length - 1){
+      view += ` and ${cart[i].itemName} at $${cart[i].itemPrice}, `
+    } else {
+      view += `${cart[i].itemName} at $${cart[i].itemPrice}, `
     }
   }
   return view.slice(0, -2) + '.';
