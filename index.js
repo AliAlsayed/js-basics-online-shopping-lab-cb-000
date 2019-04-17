@@ -22,7 +22,7 @@ function viewCart() {
   }
 
   if (cart.length == 1){
-    return view + `${cart[i].itemName} at $${cart[i].itemPrice}.`
+    return view + `${cart[0].itemName} at $${cart[0].itemPrice}.`
   }
 
   for(var i = 0; i < cart.length; i++){
